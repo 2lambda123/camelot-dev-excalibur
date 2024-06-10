@@ -1,6 +1,6 @@
 import uuid
-import random
 import string
+import secrets
 
 
 def generate_uuid():
@@ -10,8 +10,7 @@ def generate_uuid():
 def random_string(length):
     ret = ""
     while length:
-        ret += random.choice(
-            string.digits + string.ascii_lowercase + string.ascii_uppercase
+        ret += secrets.choice(string.digits + string.ascii_lowercase + string.ascii_uppercase
         )
         length -= 1
     return ret
